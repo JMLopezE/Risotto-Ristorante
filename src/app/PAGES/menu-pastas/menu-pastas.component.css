@@ -1,0 +1,26 @@
+a {
+        text-decoration-line: none;
+        color: black;
+}
+
+h2 {
+        font-family: 'Arima Madurai',cursive;
+        color: #00A149;
+}
+
+.title {
+        font-family: 'Arima Madurai',cursive;
+        padding: 2vh 0vh;
+}
+
+.title:hover {
+        color: #881014;
+}
+
+.container { 
+        padding: 3vh 2vh;
+}
+
+.padding {
+        padding: 2vh 0vh;
+}
