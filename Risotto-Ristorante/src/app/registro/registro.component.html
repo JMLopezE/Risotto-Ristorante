@@ -1,0 +1,38 @@
+<div class=" login d-flex align-item-center justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <form>
+          <div class="text d-flex align-item-center justify-content-center">
+          <h1>reserva</h1>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputNombre" class="form-label">nombre</label>
+            <input type="nombre" class="form-control" id="exampleInputNombre" aria-describedby="nombreHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputTelefono" class="form-label">teléfono</label>
+            <input type="telefono" class="form-control" id="exampleInputTelefono" aria-describedby="telefonoHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputocasion" class="form-label">ocasión</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected ></option>
+              <option value="1">cumpleaños</option>
+              <option value="2">fecha especial</option>
+              <option value="3">celebración</option>
+              <option value="4">otra</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="d-grid gap-2" >
+          <button  type="submit" class="btn btn-primary">registrar</button>
+        </div>
+        </form>
+      </div>
+    </div>
+    </div>
+
+ <router-outlet></router-outlet>
