@@ -11,5 +11,6 @@ import { RouterModule } from '@angular/router';
 export class CardComponent {
   @Input () img: String = ""
   @Input () title: String = "Titulo"
-  @Input () descripcion = "Descrioción del plato"
+  @Input () descripcion: String = "Descrioción del plato"
+  @Input () is_not:Boolean = false
 }
