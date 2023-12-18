@@ -1,10 +1,9 @@
 
-.login{
+.registro{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #DAD299;  
     background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
     background: linear-gradient(to right, #B0DAB9, #DAD299); 
 }
@@ -12,7 +11,10 @@
     font-family: 'Concert One', sans-serif;
     font-family: 'Inter', sans-serif;
     font-family: 'Libre Baskerville', serif;
-    font-size: 100px;
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .card{
     -webkit-box-shadow: 15px 15px 39px 0px rgba(0,0,0,0.52);
