@@ -1,29 +1,6 @@
-.contactanos {
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction:column;
-    background-color: black;
-    color:white;
-    column-gap: 100px;
-    row-gap: 50px;
-    align-items: center;
-    justify-content: center;
+.verde{
+    color: green;
 }
-
-
-.pie-pagina {
-    background-color: rgb(40, 40, 40);
-    display:flex;
-    flex-direction: row;
+.rojo{
+    color: red
 }
-
-.piedePagina {
-    height:50vh;
-    padding-top: 20px;
-}
-
-.mapa {
-    padding-top: 10px;
-    padding-left:150px;
-}
-
