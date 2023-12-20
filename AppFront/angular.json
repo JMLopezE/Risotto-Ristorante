@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "preserveSymlinks": true,
             "outputPath": "dist/risotto-ristorante",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -27,12 +26,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/bootstrap-icons/font/bootstrap-icons.css"             
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -103,6 +100,6 @@
     }
   },
   "cli": {
-    "analytics": "cfe2dc6a-8a81-495e-ae09-bf9f4f490ad3"
+    "analytics": false
   }
 }
