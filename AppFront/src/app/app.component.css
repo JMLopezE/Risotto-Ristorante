@@ -1,29 +1,3 @@
-.contactanos {
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction:column;
-    background-color: black;
-    color:white;
-    column-gap: 100px;
-    row-gap: 50px;
-    align-items: center;
-    justify-content: center;
+.titulo {
+        color: #731919;
 }
-
-
-.pie-pagina {
-    background-color: rgb(40, 40, 40);
-    display:flex;
-    flex-direction: row;
-}
-
-.piedePagina {
-    height:50vh;
-    padding-top: 20px;
-}
-
-.mapa {
-    padding-top: 10px;
-    padding-left:150px;
-}
-

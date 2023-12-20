@@ -1,7 +1,7 @@
 import {  reserveModel } from "../models/reserve.js";
 
 
-const createReserve = async (request, response) => {
+export const createReserve = async (request, response) => {
   try {
     let body = request.body;
 
@@ -14,7 +14,7 @@ const createReserve = async (request, response) => {
   }
 };
 
-const getReserve = async (request, response) => {
+export const getReserve = async (request, response) => {
         try {
             let reserve = await reserveModel.find()
             response.json(reserve)
@@ -24,7 +24,7 @@ const getReserve = async (request, response) => {
         }
     };
 
-const deleteReserve = async (request, response) => {
+export const deleteReserve = async (request, response) => {
         try {
             let idForDelete = request.params.id
             let reserve = await reserveModel.findOneAndDelete({ _id: idForDelete })
@@ -35,7 +35,7 @@ const deleteReserve = async (request, response) => {
         }
     };
 
-export default (createReserve, getReserve, deleteReserve);
+
 
 
 

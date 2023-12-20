@@ -1,4 +1,4 @@
-<div class="card" >
+<!-- <div class="card" >
   <img src="{{ img }}" class="card-img-top" alt="..." />
 
   <div class="card-body">
@@ -9,4 +9,25 @@
     </p>
   }
   </div>
-</div>
+</div> -->
+<p>Soy el componente card</p>
+
+  <div class="container">
+    <a routerLink="/menu"><h1 class="title">Menú</h1></a>
+    <h2>Pastas</h2>
+    <div class="row row-cols-4 row-gap-2 padding">
+      <div class="col">
+        @for (menu of menus; track menu.nombre){
+        <img src={{menu.imagen}} alt="">
+        <h2>{{ menu.nombre }}</h2>
+        <p>{{ menu.descripcion }}</p>
+      }
+      </div>
+    </div>
+  </div> 
+
+
+
+    
+    
+

@@ -7,10 +7,17 @@ import routerReserve from "./routes/reserve.routes.js"
 dotenv.config()
 
 const app = express()
-app.use(express.json())
+
+// app.get(express.json())
 const PORT = process.env.PORT
 
 app.use('/api', routerReserve)
+
+app.get("/", (req, res) => {
+        res.json({
+                "msg": "hello world"
+        })
+})
 
 connectDatabase()
 app.listen(PORT, () => {

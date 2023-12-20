@@ -1,0 +1,30 @@
+.row {
+    row-gap: 10px;
+}
+
+.contactanos {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    background-color: black;
+    color:white;
+    column-gap: 100px;
+    row-gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.pie-pagina {
+    background-color: rgb(40, 40, 40);
+    display:flex;
+    flex-direction: row;
+    padding: 50px;
+}
+
+.piedePagina {
+    height:50vh;
+    padding-top: 20px;
+}
+
+
