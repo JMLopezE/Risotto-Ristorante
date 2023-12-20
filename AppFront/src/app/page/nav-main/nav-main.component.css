@@ -1,4 +1,11 @@
-.contenedorProducto{
+
+.mivideo{
+    height: 50vw;
+    width: 100%;
+    object-fit: cover;
+}
+.contenedor{
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,8 +13,18 @@
 }
 .miTarjeta img{
     max-height: 200px;
+
 }
 .cardChef{
     display: flex;
     justify-content: center;
+}
+
+.img1{
+    height: 100%;
+    max-height: 300px;
+}
+
+.card-text{
+    text-align: justify;
 }
