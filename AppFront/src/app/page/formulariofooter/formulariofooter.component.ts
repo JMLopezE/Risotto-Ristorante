@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-formulariofooter',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, RouterOutlet],
   templateUrl: './formulariofooter.component.html',
   styleUrl: './formulariofooter.component.css'
 })
