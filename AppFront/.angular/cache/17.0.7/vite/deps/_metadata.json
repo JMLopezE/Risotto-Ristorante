@@ -1,10 +1,12 @@
 {
   "hash": "0ad3deff",
   "browserHash": "5c17cffe",
+
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
+
       "fileHash": "a522d36a",
       "needsInterop": false
     },
