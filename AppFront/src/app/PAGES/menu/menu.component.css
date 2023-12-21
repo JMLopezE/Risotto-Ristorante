@@ -1,14 +1,180 @@
-.title {
-        font-family: 'Arima Madurai',cursive;
-        padding: 2vh 0vh;
-        color: #000;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,600&family=Satisfy&display=swap');
+
+
+body {
+    background-color: #f9f6f6;
 }
 
-.container { 
-        padding: 3vh 2vh;
+.imagenMenu {
+    position:relative;
+    display:block;
+    background-image: 100%;
+    height: 90vh;
+    background-image: url(https://img.freepik.com/fotos-premium/ingredientes-cocinar-comida-italiana-fondo-madera-blanco-espacio-plano-endecha-copia_35641-2328.jpg?w=2000);
+}
+.imagenMenu img {
+    background: 100%;
+}
+
+.imagenMenu p{
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    font-size: 23px;
+    color: black;
+    padding: 5px;
+    font-weight:initial;
+}
+
+.imagenMenu h1{
+    position: relative;
+    top: 20px;
+    text-align: center;
+    color: black;
+    font-family:'Poppins', sans-serif;
+    font-weight: 800;   
+}
+
+.imagenMenu h2{
+    text-align: center;
+    color: black;
+    font-family:'Poppins', sans-serif;
+    font-weight: 800;   
+}
+
+.Menu {
+    position:relative;
+    padding-bottom: 3vh;
+
+}
+
+
+.navMenu {
+    display: flex;
+    flex-direction: row;    
+    gap: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    border-bottom: 1px solid #343534;
+    height: 5vh;
+    width: 150vh;
+    font-size: 23px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    padding: 2vh 0vh;
+    color: #00A149;
+
+}
+.imagenPasta {
+    display: flex;
+    padding: 0px 0px 0px 0px;
+}
+
+.containerPlatos {
+    row-gap: 30px;
+    gap: 50px;
+    font-size: 15px;
+    text-align: center;
 }
 
 a {
-        text-decoration-line: none;
-        color: black;
+    text-decoration-line: none;
+    color: black;
+}
+
+
+button {
+    top:0;
+    bottom:0;
+}
+
+.pdfMenu {
+    height: 35px;
+    font-size: 13px;
+    width: 120px;
+    border:2px solid grey; 
+    font-family:  Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 50px;
+    margin:0;
+    top:0;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cover {
+    position:relative;
+    display:block;
+}
+
+.cover,
+img {
+    display: block;
+    position: relative;    
+    height:20vh;
+    border-radius: 20px;
+    width:100%;
+    object-fit: cover;
+
+}
+
+.cover p {
+    font-family: 'Satisfy';
+    font-size: 50px;
+    background: linear-gradient(0 0 0/.5);
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: -16px;
+    left: 15px;
+    padding: 5px;
+    width: 100%;
+    font-weight: bolder;
+}
+
+.nuevoMenu {
+    padding-top: 18px;  
+}
+.cardMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:  Arial, Helvetica, sans-serif;
+    gap:10px;
+    border-radius: 15px;    
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+.card-title {
+    font-weight:bolder;    
+
+}
+
+#fullMenu {
+    font-size: 15px;
+    border-radius: 20px;
+    font-weight: bold;   
+}
+
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    padding: 2vh 0vh;
+    color: #000;
+}
+
+.container { 
+    padding: 3vh 2vh;
+}
+
+a {
+    text-decoration-line: none;
+    color: black;
 }

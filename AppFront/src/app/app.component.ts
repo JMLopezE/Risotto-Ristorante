@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './page/footer/footer.component';
 import { FormulariofooterComponent } from './page/formulariofooter/formulariofooter.component';
 import { NavMainComponent } from './page/nav-main/nav-main.component';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
