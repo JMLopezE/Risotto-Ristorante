@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-admin',
+  selector: 'app-footer-pie',
   standalone: true,
   imports: [RouterModule, RouterOutlet],
-  templateUrl: './admin.component.html',
-  styleUrl: './admin.component.css'
+  templateUrl: './footer-pie.component.html',
+  styleUrl: './footer-pie.component.css'
 })
-export class AdminComponent {
+export class FooterPieComponent {
 
 }

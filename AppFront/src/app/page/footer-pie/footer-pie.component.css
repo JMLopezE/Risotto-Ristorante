@@ -1,0 +1,46 @@
+/* .contenedor {
+  position: relative;
+  bottom: 0;
+} */
+
+.footer {
+  height: 20vh;
+  background-color: rgb(40, 40, 40);
+  text-align: center;
+  padding-right: 900px;
+}
+
+.footer ul {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin-inline: 25px;
+  list-style: none;
+  text-align: center;
+  font-size: 15px;
+  padding-top: 30px;
+}
+
+.footer li {
+  padding: 20px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.iconos {
+  display: flex;
+  justify-content: end;
+  background-color: rgb(40, 40, 40);
+  margin: 0;
+  padding: 0;
+}
+
+.iconos li {
+  padding-bottom: 50px;
+}
+
+.iconos i {
+  color: white;
+}

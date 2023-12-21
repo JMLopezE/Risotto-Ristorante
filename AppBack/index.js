@@ -11,6 +11,7 @@ app.use(express.json())
 const PORT = process.env.PORT
 
 app.use('/api', routerReserve)
+app.use('/api', routerAdmin)
 
 connectDatabase()
 app.listen(PORT, () => {
