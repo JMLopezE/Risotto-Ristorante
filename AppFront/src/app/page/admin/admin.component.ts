@@ -35,7 +35,7 @@ export class AdminComponent {
             next:(token)=>{
                 console.log(token)
                 this.adminService.saveToken(token)
-                this.router.navigate(['/home'])
+                this.router.navigate(['/admin'])
             },
             error:(error) =>{
                 console.log(error);

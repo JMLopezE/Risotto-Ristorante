@@ -9,5 +9,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './admin-modal.component.css'
 })
 export class AdminModalComponent {
+ 
 
 }
+
