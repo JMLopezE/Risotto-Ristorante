@@ -8,18 +8,19 @@ import { Observable } from 'rxjs';
 export class ReservesService {
   constructor(private http: HttpClient) {}
 
-  apiUrl = 'http://localhost:9000/pets';
-  tokenName = 'jwt';
+  apiUrl = 'http://localhost:9000';
 
   headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
   });
 
-  getPetsList(): Observable<any> {
-    const token: string = localStorage.getItem(this.tokenName) as string;
+  register(Reserve:any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+"/api/createreserve", Reserve,{ headers: this.headers })
+  }
+
+  reserveList(): Observable<any> {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      authorization: `Bearer ${token}`,
     });
 
     return this.http.get<any>(this.apiUrl, { headers });
