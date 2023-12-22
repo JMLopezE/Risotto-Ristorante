@@ -1,6 +1,6 @@
 import {
   Title
-} from "./chunk-FEGRLCWC.js";
+} from "./chunk-5H6VP7Q2.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -9,7 +9,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-NUZW7DHU.js";
+} from "./chunk-VGJFGOGV.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -111,7 +111,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-SPXLJOUQ.js";
+} from "./chunk-YVFDKDCQ.js";
 
 // node_modules/@angular/router/fesm2022/router.mjs
 var PRIMARY_OUTLET = "primary";
@@ -2550,9 +2550,6 @@ var ApplyRedirects = class {
     this.urlSerializer = urlSerializer;
     this.urlTree = urlTree;
   }
-  noMatchError(e) {
-    return new RuntimeError(4002, (typeof ngDevMode === "undefined" || ngDevMode) && `Cannot match any routes. URL Segment: '${e.segmentGroup}'`);
-  }
   lineralizeSegments(route, urlTree) {
     let res = [];
     let c = urlTree.root;
@@ -2761,7 +2758,7 @@ var Recognizer = class {
     this.allowRedirects = true;
   }
   noMatchError(e) {
-    return new RuntimeError(4002, (typeof ngDevMode === "undefined" || ngDevMode) && `Cannot match any routes. URL Segment: '${e.segmentGroup}'`);
+    return new RuntimeError(4002, typeof ngDevMode === "undefined" || ngDevMode ? `Cannot match any routes. URL Segment: '${e.segmentGroup}'` : `'${e.segmentGroup}'`);
   }
   recognize() {
     const rootSegmentGroup = split(this.urlTree.root, [], [], this.config).segmentGroup;
@@ -5501,7 +5498,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("17.0.6");
+var VERSION = new Version("17.0.7");
 export {
   ActivatedRoute,
   ActivatedRouteSnapshot,
@@ -5581,7 +5578,7 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-   * @license Angular v17.0.6
+   * @license Angular v17.0.7
    * (c) 2010-2022 Google LLC. https://angular.io/
    * License: MIT
    *)
