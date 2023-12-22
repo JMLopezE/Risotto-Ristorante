@@ -8,6 +8,7 @@ import { AdminModalComponent } from './page/admin-modal/admin-modal.component';
 export const routes: Routes = [
         { path: "menu", component: MenuComponent },
         { path: "admin", component:AdminComponent },
-        { path: "home", component:HomeComponent },
-        { path: "modal", component:AdminModalComponent }
-];
+        { path: "", component:HomeComponent },
+        { path: "modal", component:AdminModalComponent },
+      
+];      
