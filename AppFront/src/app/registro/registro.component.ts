@@ -36,15 +36,15 @@ onSubmit(){
         role: this.registerForm.value.role,
     }
 
-    this.ReservesService.register(reserve).subscribe({
-        next:(token)=>{
-            this.adminService.saveToken(token)
-            this.router.navigate(['/admin'])
-        },
-        error:(error) =>{
-            console.log(error);
-        }
-    })
+    // this.ReservesService.register(reserve).subscribe({
+    //     next:(token)=>{
+    //         this.adminService.saveToken(token)
+    //         this.router.navigate(['/admin'])
+    //     },
+    //     error:(error) =>{
+    //         console.log(error);
+    //     }
+    // })
 }
 
 }
