@@ -1,33 +1,98 @@
-
-<div class=" registro d-flex align-item-center justify-content-center">
-    <div class="card" style="width: 50rem;">
-      <h2 class="text">reserva</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="registro d-flex align-item-center justify-content-center">
+    <div class="card" style="width: 50rem">
+      <h2 class="text">Reserva</h2>
       <div class="d-flex align-item-center justify-content-center mt-4">
-        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/87/9c/84/en-espera-de-dhinora.jpg?w=600&h=400&s=1" >
+        <img
+          src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/87/9c/84/en-espera-de-dhinora.jpg?w=600&h=400&s=1"
+        />
       </div>
       <div class="card-body row">
         <div class="mb-3 col-6">
-          <label for="exampleFormControlInput1" class="form-label">nombre</label>
-          <input type="nombre" class="form-control" id="exampleFormControlInput1">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Nombres</label>
+          <input
+            type="name"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Apellidos</label>
+          <input
+            type="last_name"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
         </div>
         <div class="mb-3 col-6">
           <label for="exampleFormControlInput1" class="form-label">Email</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="nombre@ejemplo.com"
+          />
         </div>
         <div class="mb-3 col-6">
-          <label for="exampleFormControlInput1" class="form-label">teléfono</label>
-          <input type="telefono" class="form-control" id="exampleFormControlInput1">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Teléfono</label>
+          <input
+            type="phone"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
         </div>
         <div class="mb-3 col-6">
-          <label for="exampleFormControlInput1" class="form-label">ocasión especial</label>
-          <input type="telefono" class="form-control" id="exampleFormControlInput1">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Numero de asistentes</label>
+          <input
+            type="number_people"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Ocación</label>
+          <input
+            type="special_occasions"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Fecha</label>
+          <input
+            type="date_reserve"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3 col-6">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Hora</label>
+          <input
+            type="hour_reserve"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label">info adicional</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >info adicional</label>
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
         </div>
+        <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
+        type="submit" [disabled]="!registerForm.valid"> Reservar
+        </button>
       </div>
     </div>
-    </div>
-
-
+  </div>
+</form>

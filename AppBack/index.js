@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import cors from "cors"
 import connectDatabase from "./config/db.js"
 import routerReserve from "./routes/reserve.routes.js"
+import routerAdmin from "./routes/admin.routes.js"
 
 dotenv.config()
 
@@ -12,6 +13,7 @@ const PORT = process.env.PORT
 
 app.use('/api', routerReserve)
 app.use('/api', routerAdmin)
+
 
 connectDatabase()
 app.listen(PORT, () => {

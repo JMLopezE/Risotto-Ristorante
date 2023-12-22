@@ -8,12 +8,12 @@ import { Admin, Token } from '../models/admin.models';
   providedIn: 'root'
 })
 export class AdminService {
-  saveToken(token: Token) {
-      throw new Error('Method not implemented.');
-  }
+  // saveToken(token: Token) {
+  //     throw new Error('Method not implemented.');
+  // }
 
   apiUrl = "http://localhost:9000"
-  //tokenName = "jwt"
+  tokenName = "jwt"
 
   constructor(private http:HttpClient) { }
 
@@ -22,19 +22,19 @@ export class AdminService {
   })
 
   login(user: Admin):Observable<Token>{
-    return this.http.post<Token>(this.apiUrl+"/api/admin", JSON.stringify(user),{ headers: this.headers })
+    return this.http.post<Token>(this.apiUrl+"/api/login", JSON.stringify(user),{ headers: this.headers })
   }
 
   register(user:any): Observable<any> {
     return this.http.post<any>(this.apiUrl+"/api/createUsers", user,{ headers: this.headers })
   }
 
-  // isLogged():boolean{
-  //   return localStorage.getItem(this.tokenName) ? true : false;
-  // }
+  isLogged():boolean{
+    return localStorage.getItem(this.tokenName) ? true : false;
+  }
 
-  // saveToken(token:Token){
-  //   localStorage.setItem(this.tokenName, token.token)
-  // }
+  saveToken(token:Token){
+    localStorage.setItem(this.tokenName, token.token)
+  }
 
 }
