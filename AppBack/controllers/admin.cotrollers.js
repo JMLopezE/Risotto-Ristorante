@@ -1,6 +1,6 @@
 import { adminModel } from "../models/admin.js";
-import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
 
 export const createAdmin = async (request, response) => {
     try {
@@ -33,7 +33,7 @@ export const login = async (request, response) => {
         let adminExist = await adminModel.findOne({ email: body.email })
 
         if (!adminExist) {
-            return response.json({ error: "No existe un administrador con este gmail" })
+            return response.json({ error: "No existe un administrador con este Email" })
         }
 
         const validationsPassword = bcrypt.compareSync(body.password, adminExist.password);

@@ -1,4 +1,4 @@
-<body class="bg-dark d-flex justify-content-center align-items-center vh-100"></body>
+<body class="bg-black d-flex justify-content-center align-items-center vh-100"></body>
 <div
     class="bg-white p-5 rounded-5 text-secondary shadow"
     style="width: 25rem"
@@ -11,12 +11,12 @@
       />
     </div>
     <div class="text-center fs-1 fw-bold">Regístrate</div>
-    <!-- [formGroup]="loginForm" (ngSubmit)="onSubmit()" -->
-    <form >
+    
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="input-group mt-4">
         <div class="input-group-text bg-info">
           <img
-            src="../assets/password-icon.svg"
+            src="../assets/username-icon.svg"
             alt="password-icon"
             style="height: 1rem"
           />
@@ -31,9 +31,9 @@
       <div class="input-group mt-1">
         <div class="input-group-text bg-info">
           <img
-            src="../assets/username-icon.svg"
+            src="../assets/email-icon.svg"
             alt="username-icon"
-            style="height: 1rem"
+            style="height: 0.6rem"
           />
         </div>
         <input
@@ -61,9 +61,9 @@
       <div class="input-group mt-1">
         <div class="input-group-text bg-info">
           <img
-            src="../assets/password-icon.svg"
+            src="../assets/phone-icon.svg"
             alt="password-icon"
-            style="height: 1rem"
+            style="height: 0.6rem"
           />
         </div>
         <input
@@ -74,14 +74,14 @@
       </div>
   
     <!-- type="submit" [disabled]="!loginForm.valid" -->
-    <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
-      > Registrar
+    <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm"
+    type="submit" [disabled]="!registerForm.valid"> Registrar
     </button>
   </form>
 
     <div class="d-flex gap-1 justify-content-center mt-1">
       <div>Ya tienes una cuenta?</div>
-      <a href="#" class="text-decoration-none text-info fw-semibold"
+      <a href="./admin" class="text-decoration-none text-info fw-semibold"
         >Iniciar sesión</a
       >
     </div>
