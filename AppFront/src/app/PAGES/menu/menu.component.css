@@ -6,11 +6,12 @@ body {
 }
 
 .imagenMenu {
-    /* position:relative; */
+    position:relative;
     display:block;
     background-image: 100%;
-    height: 90vh;
-    background-image: url(https://img.freepik.com/fotos-premium/ingredientes-cocinar-comida-italiana-fondo-madera-blanco-espacio-plano-endecha-copia_35641-2328.jpg?w=2000);
+    height: 95vh;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/005/441/414/non_2x/abstract-white-and-gray-gradient-background-with-geometric-shape-illustration-vector.jpg);
+    background-size:100%;
 }
 
 .imagenMenu img {
@@ -27,7 +28,7 @@ body {
 }
 
 .imagenMenu h1{
-    /* position: relative; */
+    position: relative; 
     top: 20px;
     text-align: center;
     color: black;
@@ -52,11 +53,11 @@ body {
 .navMenu {
     display: flex;
     flex-direction: row;    
-    gap: 30px;
+    gap: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    border-bottom: 1px solid #343534;
-    height: 5vh;
+    border-bottom: 2px solid #343534;
+    height: 8vh;
     width: 150vh;
     font-size: 23px;
 }
@@ -91,15 +92,14 @@ button {
 }
 
 .pdfMenu {
+    text-align: center;
     height: 35px;
-    font-size: 13px;
-    width: 120px;
-    border:2px solid grey; 
+    font-size: 12px;
+    width: 130px;
+    border:1px solid grey; 
     font-family:  Arial, Helvetica, sans-serif;
     font-weight: bold;
     border-radius: 50px;
-    margin:0;
-    top:0;
 }
 
 .img {
@@ -110,14 +110,14 @@ button {
 }
 
 .cover {
-    /* position:relative; */
+    position:relative;
     display:block;
 }
 
 .cover,
 img {
     display: block;
-    /* position: relative;     */
+    position: relative;
     height:20vh;
     border-radius: 20px;
     width:100%;
@@ -131,7 +131,7 @@ img {
     background: linear-gradient(0 0 0/.5);
     color: white;
     display: block;
-    /* position: absolute; */
+    position: absolute;
     bottom: -16px;
     left: 15px;
     padding: 5px;
