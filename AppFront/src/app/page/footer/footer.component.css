@@ -1,3 +1,8 @@
+.contenidoFooter {
+padding:30px 0px 0px 0px;
+}
+
+
 .row {
     row-gap: 10px;
 }
@@ -12,6 +17,7 @@
     row-gap: 50px;
     align-items: center;
     justify-content: center;
+    font-family:'Poppins', sans-serif;
 }
 
 
