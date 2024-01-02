@@ -3,49 +3,45 @@ import { CommonModule } from '@angular/common';
 import { ReservesService } from '../Servicios/reserve.service';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Reserve } from '../models/reservamodels';
+import { HttpClientModule } from '@angular/common/http';
+import { Reserve } from '../models/reservamodels.js'
 
 @Component({
   selector: 'app-registro',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './registro.component.html',
   styleUrl: './registro.component.css'
 })
 export class RegistroComponent {
-        registerForm:FormGroup
+        registerForm:any;
 
   constructor(private ReservesService: ReservesService, private router:Router){
     this.registerForm = new FormGroup({
+        name: new FormControl(),
+        last_name: new FormControl(),
         email: new FormControl(),
-        password: new FormControl()
-    });
+        phone: new FormControl(),
+        number_people: new FormControl(),
+        special_occasions: new FormControl(),
+        date_reserve: new FormControl(),
+        hour_reserve: new FormControl(),
+        info: new FormControl()
+    })
 }
 
-onSubmit(){
-    const reserve:Reserve = {
-        email: this.registerForm.value.email,
-        name: this.registerForm.value.name,
-        last_name: this.registerForm.value.last_name,
-        phone: this.registerForm.value.phone,
-        password: this.registerForm.value.password,
-        number_people: this.registerForm.value.number_people,
-        special_occasions: this.registerForm.value.special_occasions,
-        date_reserve: this.registerForm.value.date_reserve,
-        hour_reserve: this.registerForm.value.hour_reserve,
-        role: this.registerForm.value.role,
+async onSubmit(){
+  console.log(this.registerForm.value)
+  const reserve = await this.ReservesService.register(this.registerForm.value).subscribe(
+    response=> {
+      console.log(response)
+    },
+    error => {
+      console.log(error)
     }
-
-    // this.ReservesService.register(reserve).subscribe({
-    //     next:(token)=>{
-    //         this.adminService.saveToken(token)
-    //         this.router.navigate(['/admin'])
-    //     },
-    //     error:(error) =>{
-    //         console.log(error);
-    //     }
-    // })
+  )
+  console.log(reserve)
 }
-
 }
+    
 

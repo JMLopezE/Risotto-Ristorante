@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
-import { FooterPieComponent } from "../footer-pie/footer-pie.component";
 import { AdminService } from '../../Servicios/admin.service';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-import { Admin } from '../../models/admin.models';
+import { HttpClientModule } from '@angular/common/http';
+import { Admin, } from '../../models/admin.models';
 import { CommonModule } from '@angular/common';
 
 
@@ -13,10 +12,10 @@ import { CommonModule } from '@angular/common';
     standalone: true,
     templateUrl: './admin.component.html',
     styleUrl: './admin.component.css',
-    imports: [RouterModule, RouterOutlet, FooterPieComponent, CommonModule, FormsModule, ReactiveFormsModule]
+    imports: [RouterModule, RouterOutlet, CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule]
 })
 export class AdminComponent {
-    loginForm:FormGroup
+    loginForm:any;
 
     constructor(private adminService: AdminService, private router:Router){
         this.loginForm = new FormGroup({
@@ -25,13 +24,13 @@ export class AdminComponent {
         });
     }
 
-    onSubmit(){
-        const user:Admin = {
+    onSubmit(){       
+        const admin:Admin = {
             password: this.loginForm.value.password,
-            email: this.loginForm.value.email
+            email: this.loginForm.value.email,
         }
 
-        this.adminService.login(user).subscribe({
+        this.adminService.login(admin).subscribe({
             next:(token)=>{
                 console.log(token)
                 this.adminService.saveToken(token)

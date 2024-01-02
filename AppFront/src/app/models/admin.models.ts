@@ -10,7 +10,3 @@ export interface Admin {
 export interface Token {
         token: string
 }
-
-
-
-

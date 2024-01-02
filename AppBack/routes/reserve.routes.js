@@ -1,11 +1,28 @@
 import express from 'express'
-import { createReserve, getReserve, deleteReserve }  from '../controllers/reserve.controllers.js'
+import { createReserve, getReserve, deleteReserve, getReserveByID }  from '../controllers/reserve.controllers.js'
 
 
-const router = express.Router()
+const reserveRouter = express.Router()
 
-router.post('/createreserve', createReserve)
-router.get('/getreserve', getReserve)
-router.delete('/deletereserve', deleteReserve)
+reserveRouter.get("/", async(req, res) => {
+        res.json(await getReserve())
+})
 
-export default router
+reserveRouter.post("/create", async(req, res) => {
+        const newReserve = req.body
+        res.json(await createReserve(newReserve))        
+})
+
+reserveRouter.delete("/:reserveId", async(req, res) =>{
+        const { reserveId } = req.params;
+
+        res.json(await deleteReserve(reserveId))
+})
+
+reserveRouter.get("/:reserveId", async(req, res) =>{
+        const { reserveId } = req.params;
+
+        res.json(await getReserveByID(reserveId))
+})
+
+export default reserveRouter;

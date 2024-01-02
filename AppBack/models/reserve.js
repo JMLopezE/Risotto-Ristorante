@@ -7,7 +7,6 @@ const reserveSchema = mongoose.Schema({
         email: {
                 type: String,
                 required: true,
-                unique: true
                 },
         name: {
                 type: String,
@@ -30,14 +29,14 @@ const reserveSchema = mongoose.Schema({
                 required: true
                 },
         date_reserve:{
-                type:Number,
+                type:String,
                 required:true
                 },
         hour_reserve:{
-                type:Number,
+                type:String,
                 required:true
                 }
 })
         
-export const reserveModel = mongoose.model('reserve', reserveSchema);
+export default mongoose.model('reserve', reserveSchema);
 

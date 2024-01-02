@@ -1,4 +1,4 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
   <div class="registro d-flex align-item-center justify-content-center">
     <div class="card" style="width: 50rem">
       <h2 class="text">Reserva</h2>
@@ -7,12 +7,14 @@
           src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/87/9c/84/en-espera-de-dhinora.jpg?w=600&h=400&s=1"
         />
       </div>
+      <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
       <div class="card-body row">
         <div class="mb-3 col-6">
           <label for="exampleFormControlInput1" class="form-label"
             >Nombres</label>
           <input
             type="name"
+            formControlName="name"
             class="form-control"
             id="exampleFormControlInput1"
           />
@@ -22,6 +24,7 @@
             >Apellidos</label>
           <input
             type="last_name"
+            formControlName="last_name"
             class="form-control"
             id="exampleFormControlInput1"
           />
@@ -31,6 +34,7 @@
           <input
             type="email"
             class="form-control"
+            formControlName="email"
             id="exampleFormControlInput1"
             placeholder="nombre@ejemplo.com"
           />
@@ -41,6 +45,7 @@
           <input
             type="phone"
             class="form-control"
+            formControlName="phone"
             id="exampleFormControlInput1"
           />
         </div>
@@ -49,6 +54,7 @@
             >Numero de asistentes</label>
           <input
             type="number_people"
+            formControlName="number_people"
             class="form-control"
             id="exampleFormControlInput1"
           />
@@ -59,6 +65,7 @@
           <input
             type="special_occasions"
             class="form-control"
+            formControlName="special_occasions"
             id="exampleFormControlInput1"
           />
         </div>
@@ -68,7 +75,9 @@
           <input
             type="date_reserve"
             class="form-control"
+            formControlName="date_reserve"
             id="exampleFormControlInput1"
+            placeholder="dd-mm-aaaa"
           />
         </div>
         <div class="mb-3 col-6">
@@ -77,22 +86,26 @@
           <input
             type="hour_reserve"
             class="form-control"
+            formControlName="hour_reserve"
             id="exampleFormControlInput1"
+            placeholder="hh-mm am"
           />
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label"
             >info adicional</label>
-          <textarea
+            <input
+            type="info"
             class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
+            formControlName="info"
+            id="exampleFormControlInput1"
+          />
         </div>
         <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
         type="submit" [disabled]="!registerForm.valid"> Reservar
         </button>
       </div>
+    </form>
     </div>
   </div>
-</form>
+

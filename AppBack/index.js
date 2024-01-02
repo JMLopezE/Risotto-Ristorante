@@ -1,23 +1,40 @@
 import express from "express"
 import dotenv from "dotenv"
 import cors from "cors"
-import connectDatabase from "./config/db.js"
-import routerReserve from "./routes/reserve.routes.js"
-import routerAdmin from "./routes/admin.routes.js"
+import mongoose from "mongoose"
+import adminRouter from "./routes/admin.routes.js"
+import reserveRouter from "./routes/reserve.routes.js"
+import { checkToken } from "./utils/middlewares.js"
 
-dotenv.config()
+dotenv.config();
+
+const connectToDataBase = async () =>{
+        await mongoose.connect(process.env.DB_URI)
+};
+
+connectToDataBase().then(
+        res => {
+                console.log("Conexion con la base de datos")
+        }
+).catch(
+        err => {
+                console.log("Sin conexion a la base de datos");
+                process.exit()
+        }
+        
+)
+
+
+const PORT = process.env.PORT;
 
 const app = express()
+app.use(cors());
+
 app.use(express.json())
-const PORT = process.env.PORT
+app.use('/admin', checkToken, adminRouter)
+app.use('/reserve', reserveRouter)
 
-app.use('/api', routerReserve)
-app.use('/api', routerAdmin)
-
-
-connectDatabase()
 app.listen(PORT, () => {
         console.log("El servidor se esta ejecutando " + PORT)
 })
 
-export default app;

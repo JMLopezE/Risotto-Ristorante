@@ -1,4 +1,4 @@
-import { adminModel } from "../models/admin.js";
+import adminSchema from "../models/admin.js"
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
@@ -8,7 +8,7 @@ export const createAdmin = async (request, response) => {
 
         body.password = bcrypt.hashSync(body.password, parseInt(process.env.MASTER_KEY))
 
-        let newAdmin = await adminModel.create(body)
+        let newAdmin = await adminSchema.create(body)
 
         const payload = { _id: newAdmin._id }
 
@@ -30,7 +30,7 @@ export const login = async (request, response) => {
     try {
         let body = request.body
 
-        let adminExist = await adminModel.findOne({ email: body.email })
+        let adminExist = await adminSchema.findOne({ email: body.email })
 
         if (!adminExist) {
             return response.json({ error: "No existe un administrador con este Email" })
@@ -57,15 +57,6 @@ export const login = async (request, response) => {
     }
 }
 
-export const getAdmin = async (request, response) => {
-
-    try {
-        let user = await adminModel.find()
-        response.json(user)
-
-    } catch (e) {
-        console.log(e)
-        response.json(e)
-    }
-
+export const getAdmin = async () => {
+    return await adminSchema.find()
 }

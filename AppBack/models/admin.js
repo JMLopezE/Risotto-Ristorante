@@ -7,7 +7,6 @@ const adminSchema = mongoose.Schema({
         email: {
                 type: String,
                 required: true,
-                unique: true
                 },
         name: {
                 type: String,
@@ -23,10 +22,14 @@ const adminSchema = mongoose.Schema({
         },
         password: {
                 type: String,
-                require: true,
+                required: true,
                 unique: true
+        },
+        role: {
+                type: String,
+                required: true
         }
 
 })
         
-export const adminModel = mongoose.model('user', adminSchema)
+export default mongoose.model('administradores', adminSchema)

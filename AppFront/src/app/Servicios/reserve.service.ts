@@ -1,28 +1,33 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Reserve } from '../models/reservamodels.js';
+
 
 @Injectable({
   providedIn: 'root',
 })
+
 export class ReservesService {
+
   constructor(private http: HttpClient) {}
 
-  apiUrl = 'http://localhost:9000';
+  apiUrl = 'http://localhost:9000/reserve';
+  tokenName = "jwt"
 
   headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
-  });
+  })
 
-  register(Reserve:any): Observable<any> {
-    return this.http.post<any>(this.apiUrl+"/api/createreserve", Reserve,{ headers: this.headers })
+  register(reserve:Reserve): Observable<Reserve> {
+    return this.http.post<Reserve>(this.apiUrl+"/create", reserve,{ headers: this.headers })
   }
 
-  reserveList(): Observable<any> {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-    });
-
-    return this.http.get<any>(this.apiUrl, { headers });
+  getReserveList(): Observable<Reserve[]> {
+    let headers = this.headers;
+    const token:string = localStorage.getItem(this.tokenName) as string
+    headers = headers.append("Authorization", "Bearer" + token)
+  
+  return this.http.get<Reserve[]>(this.apiUrl,  { headers });
   }
 }
