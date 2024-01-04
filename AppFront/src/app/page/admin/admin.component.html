@@ -1,4 +1,4 @@
-<!-- <body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+<section class="bg-dark d-flex justify-content-center align-items-center vh-100">
   <div
     class="bg-white p-5 rounded-5 text-secondary shadow"
     style="width: 25rem"
@@ -10,15 +10,9 @@
         style="height: 7rem"
       />
     </div>
-    <div class="text-center fs-1 fw-bold">Iniciar sesión</div> -->
+    <div class="text-center fs-1 fw-bold">Iniciar sesión </div>
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input type="text" formControlName="email" placeholder="Username">
-      <input type="password" formControlName="password" placeholder="Password">
-      <button type="submit" [disabled]="!loginForm.valid">Login</button>
-    </form>
-
-    <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="input-group mt-4">
         <div class="input-group-text bg-info">
           <img
@@ -30,7 +24,6 @@
         <input
           class="form-control bg-light"
           type="email"
-          formControlName="email"
           placeholder="Usuario"
         />
       </div>
@@ -45,7 +38,6 @@
         <input
           class="form-control bg-light"
           type="password"
-          formControlName="password"
           placeholder="Contraseña"
         />
       </div>
@@ -67,9 +59,9 @@
     <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
       type="submit" [disabled]="!loginForm.valid"> Iniciar sesión
     </button>
-  </form> -->
+  </form>
 
-    <!-- <div class="d-flex gap-1 justify-content-center mt-1">
+    <div class="d-flex gap-1 justify-content-center mt-1">
       <div>No tienes una cuenta?</div>
       <a href="./modal" class="text-decoration-none text-info fw-semibold"
         >Registrate</a
@@ -89,6 +81,5 @@
       <div class="fw-semibold text-secondary">Continuar con Google</div>
     </div>
   </div>
-</body> -->
-
+</section>
 
