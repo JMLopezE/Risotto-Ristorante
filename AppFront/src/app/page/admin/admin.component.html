@@ -1,4 +1,4 @@
-<!-- <body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+<section class="bg-dark d-flex justify-content-center align-items-center vh-100">
   <div
     class="bg-white p-5 rounded-5 text-secondary shadow"
     style="width: 25rem"
@@ -10,15 +10,9 @@
         style="height: 7rem"
       />
     </div>
-    <div class="text-center fs-1 fw-bold">Iniciar sesión</div> -->
-    
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input type="text" formControlName="email" placeholder="Username">
-      <input type="password" formControlName="password" placeholder="Password">
-      <button type="submit" [disabled]="!loginForm.valid">Login</button>
-    </form>
+    <div class="text-center fs-1 fw-bold">Iniciar sesión </div>
 
-    <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="input-group mt-4">
         <div class="input-group-text bg-info">
           <img
@@ -30,7 +24,6 @@
         <input
           class="form-control bg-light"
           type="email"
-          formControlName="email"
           placeholder="Usuario"
         />
       </div>
@@ -45,33 +38,28 @@
         <input
           class="form-control bg-light"
           type="password"
-          formControlName="password"
           placeholder="Contraseña"
         />
       </div>
-
-      <div class="d-flex justify-content-around mt-1">
-        <div class="d-flex align-items-center gap-1">
-          <input class="form-check-input" type="checkbox" />
-          <div class="pt-1" style="font-size: 0.9rem">Acuérdate de mí</div>
-        </div>
-        <div class="pt-1">
-          <a
-            href="#"
-            class="text-decoration-none text-info fw-semibold fst-italic"
-            style="font-size: 0.9rem"
-            >Olvidaste tu contraseña?</a
-          >
-        </div>
+    
+    <div class="d-flex justify-content-around mt-1">
+      <div class="d-flex align-items-center gap-1">
+        <input class="form-check-input" type="checkbox" />
+        <div class="pt-1" style="font-size: 0.9rem">Acuérdate de mí</div>
       </div>
-      <button
-        class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm"
-        type="submit"
-        [disabled]="!loginForm.valid"
-      >
-        Iniciar sesión
-      </button>
-    </form>
+      <div class="pt-1">
+        <a
+          href="#"
+          class="text-decoration-none text-info fw-semibold fst-italic"
+          style="font-size: 0.9rem"
+          >Olvidaste tu contraseña?</a
+        >
+      </div>
+    </div>
+    <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
+      type="submit" [disabled]="!loginForm.valid"> Iniciar sesión
+    </button>
+  </form> -->
 
     <div class="d-flex gap-1 justify-content-center mt-1">
       <div>No tienes una cuenta?</div>
@@ -94,3 +82,5 @@
     </div>
   </div>
 </body> -->
+
+

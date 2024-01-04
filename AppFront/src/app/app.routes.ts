@@ -11,7 +11,7 @@ import { loginGuard } from './guards/login.guard';
 export const routes: Routes = [
         { path: "menu", component: MenuComponent },
         { path: "admin", component: AdminComponent },
-        { path: "home", component: HomeComponent },
+        { path: "", component: HomeComponent },
         { path: "modal", component: AdminModalComponent },
         { path: "reserva", component: RegistroComponent },
         { path: "reserve-list", component: ReserveListComponent,
