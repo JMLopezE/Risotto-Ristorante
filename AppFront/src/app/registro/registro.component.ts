@@ -13,6 +13,8 @@ import { Reserve } from '../models/reservamodels.js'
   templateUrl: './registro.component.html',
   styleUrl: './registro.component.css'
 })
+
+
 export class RegistroComponent {
         registerForm:any;
 
@@ -27,13 +29,13 @@ export class RegistroComponent {
         date_reserve: new FormControl(),
         hour_reserve: new FormControl(),
         info: new FormControl()
-    })
+    });
 }
 
-async onSubmit(){
+onSubmit(){
   console.log(this.registerForm.value)
-  const reserve = await this.ReservesService.register(this.registerForm.value).subscribe(
-    response=> {
+  const reserve = this.ReservesService.register(this.registerForm.value).subscribe(
+    response => {
       console.log(response)
     },
     error => {

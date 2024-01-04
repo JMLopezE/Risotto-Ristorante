@@ -1,6 +1,32 @@
-<div *ngFor="let Reserve of reservas">
-        <ol>
-                {{Reserve.name}}
-        </ol>
-
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefono</th>
+        <th scope="col"># asistentes</th>
+        <th scope="col">Ocacion</th>
+        <th scope="col">fecha</th>
+        <th scope="col">hora</th>
+        <th scope="col">Información</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let Reserve of reservas">
+      <tr>
+        <th scope="row"></th>
+        <td>{{ Reserve.name }}</td>
+        <td>{{ Reserve.last_name }}</td>
+        <td>{{ Reserve.email }}</td>
+        <td>{{ Reserve.phone }}</td>
+        <td>{{ Reserve.number_people }}</td>
+        <td>{{ Reserve.special_occasions }}</td>
+        <td>{{ Reserve.date_reserve }}</td>
+        <td>{{ Reserve.hour_reserve }}</td>
+        <td>{{ Reserve.info }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

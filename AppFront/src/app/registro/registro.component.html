@@ -102,10 +102,30 @@
           />
         </div>
         <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
-        type="submit" [disabled]="!registerForm.valid"> Reservar
+          data-bs-toggle="modal" data-bs-target="#exampleModal"
+          type="submit" [disabled]="!registerForm.valid"> Reservar
         </button>
       </div>
     </form>
+    </div>
+  </div>
+
+  <!-- Modal  -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Reserva exitosa</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Gracias por reservar con Rissotto Ristorante, sera un placer atenderte
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Crear nueva reserva</button>
+          <button type="button" class="btn btn-primary">Ir a pagina de inicio</button>
+        </div>
+      </div>
     </div>
   </div>
 

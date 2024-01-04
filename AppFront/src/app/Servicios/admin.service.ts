@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Admin, Token } from '../models/admin.models';
+import { Reserve } from '../models/reservamodels';
 
 
 @Injectable({
@@ -34,12 +35,12 @@ export class AdminService {
     localStorage.setItem(this.tokenName, token.token)
   }
 
-  // getReserveList():Observable<Admin[]>{
-  //   let headers = this.headers;
-  //   const token:string = localStorage.getItem(this.tokenName) as string
-  //   headers = headers.append("Authorization", "Bearer" + token)
+  getReserveList():Observable<Reserve[]>{
+    let headers = this.headers;
+    const token:string = localStorage.getItem(this.tokenName) as string
+    headers = headers.append("Authorization", "Bearer" + token)
 
-  //   return this.http.get<Admin[]>(this.apiUrl, { headers })
-  // }
+    return this.http.get<Reserve[]>(this.apiUrl +"/admin/login", { headers })
+  }
 
 }

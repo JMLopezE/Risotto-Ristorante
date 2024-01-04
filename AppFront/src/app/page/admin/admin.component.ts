@@ -3,7 +3,7 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { AdminService } from '../../Servicios/admin.service';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Admin, } from '../../models/admin.models';
+import { Admin } from '../../models/admin.models';
 import { CommonModule } from '@angular/common';
 
 
@@ -34,7 +34,7 @@ export class AdminComponent {
             next:(token)=>{
                 console.log(token)
                 this.adminService.saveToken(token)
-                this.router.navigate(['/admin'])
+                this.router.navigate(['/reserve-list'])
             },
             error:(error) =>{
                 console.log(error);

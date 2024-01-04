@@ -2,42 +2,41 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { AdminService } from '../../Servicios/admin.service';
-import { Admin } from '../../models/admin.models';
+import { Admin, Token } from '../../models/admin.models';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-admin-modal',
   standalone: true,
-  imports: [RouterModule, RouterModule,ReactiveFormsModule],
+  imports: [CommonModule, RouterModule, RouterModule,ReactiveFormsModule],
   templateUrl: './admin-modal.component.html',
   styleUrl: './admin-modal.component.css'
 })
 
 export class AdminModalComponent {
-  registerForm:FormGroup
+  registerForm:FormGroup;
 
   constructor(private adminService: AdminService, private router:Router){
     this.registerForm = new FormGroup({
+        name: new FormControl(),
         email: new FormControl(),
-        password: new FormControl()
+        password: new FormControl(),
+        phone: new FormControl()
     });
 }
 
 onSubmit(){
-    const user:Admin = {
-        password: this.registerForm.value.password,
-        email: this.registerForm.value.email
-    }
-
-    this.adminService.login(user).subscribe({
-        next:(token)=>{
-            console.log(token)
-            this.adminService.saveToken(token)
+    console.log(this.registerForm.value)
+    const register = this.adminService.register(this.registerForm.value).subscribe(
+        response => {
+            console.log(response)
             this.router.navigate(['/admin'])
         },
-        error:(error) =>{
-            console.log(error);
+        error => {
+            console.log(error)
         }
-    })
+        )
+        console.log(register)
 }
 
 }
