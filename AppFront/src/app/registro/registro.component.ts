@@ -4,7 +4,6 @@ import { ReservesService } from '../Servicios/reserve.service';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { Reserve } from '../models/reservamodels.js'
 
 @Component({
   selector: 'app-registro',

@@ -8,14 +8,14 @@
         />
       </div>
       <form  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="card-body row">
+      <div class="card-body row form text">
         <div class="mb-3 col-6">
           <label for="exampleFormControlInput1" class="form-label"
             >Nombres</label>
           <input
             type="name"
             formControlName="name"
-            class="form-control"
+            class="form-control bg-light"
             id="exampleFormControlInput1"
           />
         </div>
@@ -32,7 +32,7 @@
         <div class="mb-3 col-6">
           <label for="exampleFormControlInput1" class="form-label">Email</label>
           <input
-            type="email"
+            type="name"
             class="form-control"
             formControlName="email"
             id="exampleFormControlInput1"
@@ -93,7 +93,7 @@
         </div>
         <div class="mb-3">
           <label for="exampleFormControlTextarea1" class="form-label"
-            >info adicional</label>
+            >Recomendaciones</label>
             <input
             type="info"
             class="form-control"
@@ -101,7 +101,7 @@
             id="exampleFormControlInput1"
           />
         </div>
-        <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
+        <button class="btn btn-danger btn-info text-white w-100 mt-4 fw-semibold shadow-sm text" 
           data-bs-toggle="modal" data-bs-target="#exampleModal"
           type="submit" [disabled]="!registerForm.valid"> Reservar
         </button>

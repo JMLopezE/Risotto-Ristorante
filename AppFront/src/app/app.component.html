@@ -1,63 +1,35 @@
-
-<nav class="navbar navbar-expand-sm bg-body-tertiary"style=".bg-dark" data-bs-theme="dark">
-  <div class="container">
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid barra">
     <a class="navbar-brand"> <span class="verde">Ri</span><span class="blanco">sso</span><span class="rojo">tto</span> <span class="verde">  Ris</span><span class="blanco">tora</span><span class="rojo">nte</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon btn btn-light"></span>
     </button>
-    </div>
-<ul class="menu">
-  <li>
-    <a href="/home">
-      <span>Home</span>
-      <span>
-        <i class="bi bi-houses-fill"></i>
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="/menu">
-      <span>Menu</span>
-      <span>
-        <i class="bi bi-menu-down"></i>
-      </span>
-    </a>
-  </li>
-  <li>
-    <a href="/reserva">
-      <span>Reservas</span>
-      <span>
-        <i class="bi bi-clipboard2-fill"></i> 
-      </span>
-    </a>
-  </li>
-</ul>
-</nav>
-
-<!-- <nav class="navbar navbar-expand-sm bg-body-tertiary"style=".bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="">Home<span class="verde">Ri</span><span>sso</span><span class="rojo">tto</span> <span class="verde">  Ris</span>tora<span class="rojo">nte</span></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"> 
-          <a class="nav-link" aria-current="page" href="/home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/menu">Menú</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/reserva">Eventos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true"></a>
-        </li>
-      </ul>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav menu">
+        <a class="nav-link active" aria-current="page" href="">
+          <span>Home</span>
+          <span>
+            <i class="bi bi-houses-fill"></i>
+          </span>
+        </a>
+        <a class="nav-link" href="/menu">
+          <span>Menu</span>
+          <span>
+            <i class="bi bi-menu-down"></i>
+          </span>
+        </a>
+        <a class="nav-link" href="/reserva"> 
+          <span>Reservas</span>
+          <span>
+            <i class="bi bi-clipboard2-fill"></i> 
+          </span></a>
+        
+      </div>
     </div>
   </div>
-</nav> -->
+</nav>
+
+
 <router-outlet></router-outlet>
 
 

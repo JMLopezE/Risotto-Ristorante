@@ -1,9 +1,9 @@
 export interface Admin {
+        
+        full_name?: string;
         email?: string;
-        name?: string;
-        last_name?: string;
-        phone?: number;
         password: string;
+        phone?: number;
         role?: string;
 }
 

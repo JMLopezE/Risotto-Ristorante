@@ -11,9 +11,9 @@
           style="height: 7rem"
         />
       </div>
-      <div class="text-center fs-1 fw-bold">Regístrate</div>
+      <div class="text-center fs-1 fw-bold text">Regístrate</div>
       <!-- [formGroup]="loginForm" (ngSubmit)="onSubmit()" -->
-      <form >
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="input-group mt-4">
           <div class="input-group-text bg-info">
             <img
@@ -25,7 +25,8 @@
           <input
             class="form-control bg-light"
             type="name"
-            placeholder="Nombre"
+            formControlName="full_name"
+            placeholder="Nombre completo"
           />
         </div>
   
@@ -39,13 +40,14 @@
           </div>
           <input
             class="form-control bg-light"
-            type="email"
+            type="name"
+            formControlName="email"
             placeholder="Email"
           />
         </div>
   
         <div class="input-group mt-1">
-          <div class="input-group-text bg-info">
+          <div class="input-group-text bg-info color">
             <img
               src="../assets/password-icon.svg"
               alt="password-icon"
@@ -54,7 +56,8 @@
           </div>
           <input
             class="form-control bg-light"
-            type="password"
+            type="name"
+            formControlName="password"
             placeholder="Contraseña"
           />
         </div>
@@ -70,17 +73,34 @@
           <input
             class="form-control bg-light"
             type="name"
+            formControlName="phone"
             placeholder="Celular"
+          />
+        </div>
+        <div class="input-group mt-1">
+          <div class="input-group-text bg-info">
+            <img
+              src="../assets/phone-icon.svg"
+              alt="password-icon"
+              style="height: 0.6rem"
+            />
+          </div>
+          <input
+            class="form-control bg-light"
+            type="name"
+            formControlName="role"
+            placeholder="Rol"
           />
         </div>
     
       <!-- type="submit" [disabled]="!loginForm.valid" -->
-      <button class="btn btn-info text-white w-100 mt-4 fw-semibold shadow-sm" 
+      <button class="btn btn-danger btn-info text-white w-100 mt-4 fw-semibold shadow-sm text" 
+        type="submit" [disabled]="!registerForm.valid"
         > Registrar
       </button>
     </form>
   
-      <div class="d-flex gap-1 justify-content-center mt-1">
+      <div class="d-flex gap-1 justify-content-center mt-1 text">
         <div>Ya tienes una cuenta?</div>
         <a href="./admin" class="text-decoration-none text-info fw-semibold"
           >Iniciar sesión</a
@@ -97,7 +117,7 @@
           alt="google-icon"
           style="height: 1.6rem"
         />
-        <div class="fw-semibold text-secondary">Regístrate con Google</div>
+        <div class="fw-semibold text-secondary text">Regístrate con Google</div>
       </div>
     </div>
   </section>

@@ -20,14 +20,18 @@ export class ReservesService {
   })
 
   register(reserve:Reserve): Observable<Reserve> {
-    return this.http.post<Reserve>(this.apiUrl+"/create", reserve,{ headers: this.headers })
+    return this.http.post<Reserve>(this.apiUrl+"/reserve/create", reserve,{ headers: this.headers })
   }
+
+  // deleteReserve(reserve:Reserve): Observable<Reserve> {
+  //   return this.http.delete<Reserve>(this.apiUrl+"/reserve/:reserveId", reserve,{ headers: this.headers })
+  // }
 
   getReserveList(): Observable<Reserve[]> {
     let headers = this.headers;
     const token:string = localStorage.getItem(this.tokenName) as string
     headers = headers.append("Authorization", "Bearer" + token)
   
-  return this.http.get<Reserve[]>(this.apiUrl+"/admin/login",  { headers });
+  return this.http.get<Reserve[]>(this.apiUrl+"/reserve",  { headers })
   }
 }
