@@ -31,7 +31,7 @@ const app = express()
 app.use(cors());
 
 app.use(express.json())
-app.use('/admin', adminRouter)
+app.use('/admin', checkToken, adminRouter)
 app.use('/reserve', reserveRouter)
 
 app.listen(PORT, () => {
