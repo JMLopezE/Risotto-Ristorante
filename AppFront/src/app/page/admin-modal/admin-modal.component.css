@@ -8,3 +8,13 @@
 .color{
         background-color: crimson;
 }
+
+.alert-danger {
+        color: rgb(158, 26, 26);
+        border-color: aliceblue;
+        margin-bottom: 5px;
+}
+
+.container-error-message {
+        padding: 3px;
+}

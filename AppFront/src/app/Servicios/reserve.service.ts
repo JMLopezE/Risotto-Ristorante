@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Reserve } from '../models/reservamodels.js';
+import { Token } from '../models/admin.models.js';
 
 
 @Injectable({
@@ -23,6 +24,10 @@ export class ReservesService {
     return this.http.post<Reserve>(this.apiUrl+"/reserve/create", reserve,{ headers: this.headers })
   }
 
+  saveToken(token:Token){
+    localStorage.setItem(this.tokenName, token.token)
+  }
+
   // deleteReserve(reserve:Reserve): Observable<Reserve> {
   //   return this.http.delete<Reserve>(this.apiUrl+"/reserve/:reserveId", reserve,{ headers: this.headers })
   // }
@@ -30,7 +35,7 @@ export class ReservesService {
   getReserveList(): Observable<Reserve[]> {
     let headers = this.headers;
     const token:string = localStorage.getItem(this.tokenName) as string
-    headers = headers.append("Authorization", "Bearer" + token)
+    headers = headers.append("Authorization", "Beader" + token)
   
   return this.http.get<Reserve[]>(this.apiUrl+"/reserve",  { headers })
   }

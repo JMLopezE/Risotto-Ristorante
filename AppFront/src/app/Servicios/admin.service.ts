@@ -40,7 +40,8 @@ export class AdminService {
     const token:string = localStorage.getItem(this.tokenName) as string
     headers = headers.append("Authorization", "Bearer" + token)
 
-    return this.http.get<Reserve[]>(this.apiUrl +"/admin/login", { headers })
+    return this.http.get<Reserve[]>(this.apiUrl +"/reserve-list", { headers })
   }
+
 
 }

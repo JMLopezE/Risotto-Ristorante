@@ -3,6 +3,7 @@
 .registro{
     min-height: 100vh;
     display: flex;
+    padding: 100px 0px;
     align-items: center;
     justify-content: center;
     background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
@@ -12,9 +13,16 @@
 .text{
     font-family:  Arial, Helvetica, sans-serif;
     font-size: 18px;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+}
+
+.text1{
+    font-family:'Poppins', sans-serif;
+    font-weight: 800;
+    padding: 30px 0px 0px 0px;
+    text-align: center;
 }
 .card{
     -webkit-box-shadow: 15px 15px 39px 0px rgba(0,0,0,0.52);
@@ -22,6 +30,17 @@
     box-shadow: 15px 15px 39px 0px rgba(0,0,0,0.52);
 }
 
-.form{
+/* .form{
     padding: 30px;
+} */
+
+.alert-danger {
+    color: rgb(158, 26, 26);
+    border-color: aliceblue;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.container-error-message {
+    padding: 3px;
 }

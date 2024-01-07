@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { AdminService } from '../../Servicios/admin.service';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Admin } from '../../models/admin.models';
 import { CommonModule } from '@angular/common';
@@ -19,8 +19,8 @@ export class AdminComponent {
 
     constructor(private adminService: AdminService, private router:Router){
         this.loginForm = new FormGroup({
-            email: new FormControl(),
-            password: new FormControl()
+            email: new FormControl('', Validators.required ),
+            password: new FormControl('', Validators.required)
         });
     }
 
