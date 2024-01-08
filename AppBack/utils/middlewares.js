@@ -2,9 +2,7 @@ import jwt from 'jsonwebtoken';
 
 export const checkToken = (req, res, next) => {
     if (!req.headers['authorization']) {
-        return res.json({
-            error: 'Falta cabecera y token'
-        });
+        return res.json("prueva");
     }
 
     let token = ""

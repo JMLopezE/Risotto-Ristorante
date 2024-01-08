@@ -39,8 +39,8 @@
             <td>{{ Reserve.date_reserve }}</td>
             <td>{{ Reserve.hour_reserve }}</td>
             <td>
-             <button><i class="bi bi-pencil-square" id="icons"></i></button> 
-              <button><i  class="bi bi-trash" id="icons"></i></button>
+              <a routerLink="/reserve-list/{{reserve}}"> <button><i class="bi bi-pencil-square" id="icons"></i></button> </a>
+              <a href="" onclick="delete(reserve._id)"> <button><i  class="bi bi-trash" id="icons"></i></button>  </a>
             </td>
           </tr>
         </tbody>

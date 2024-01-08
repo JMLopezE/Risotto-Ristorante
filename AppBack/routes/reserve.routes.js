@@ -1,5 +1,5 @@
 import express from 'express'
-import { createReserve, getReserve, deleteReserve, getReserveByID }  from '../controllers/reserve.controllers.js'
+import { createReserve, getReserve, deleteReserve, getReserveByID, putReserve }  from '../controllers/reserve.controllers.js'
 
 
 const reserveRouter = express.Router()
@@ -13,16 +13,22 @@ reserveRouter.post("/create", async(req, res) => {
         res.json(await createReserve(newReserve))        
 })
 
-reserveRouter.delete("/:reserveId", async(req, res) =>{
+reserveRouter.delete("/:deleteId", async(req, res) =>{
         const { reserveId } = req.params;
 
         res.json(await deleteReserve(reserveId))
 })
 
-reserveRouter.get("/:reserveId", async(req, res) =>{
+reserveRouter.get("/:getId", async(req, res) =>{
         const { reserveId } = req.params;
 
         res.json(await getReserveByID(reserveId))
+})
+
+reserveRouter.put("/:editId", async(req, res) =>{
+        const { reserveId } = req.params;
+
+        res.json(await putReserve(reserveId))
 })
 
 export default reserveRouter;

@@ -16,8 +16,15 @@ import { CommonModule } from '@angular/common';
 export class ReserveListComponent implements OnInit {
 
   reservas:Reserve[] = []
+  reserve: any;
+  
+  _id:any
 
   constructor(private reservesService:ReservesService){}
+
+  // onClick (_id:Reserve) {
+  //   this.reservesService.deleteReserve().subscribe({})
+  // }
 
   ngOnInit(){
     this.reservesService.getReserveList().subscribe({

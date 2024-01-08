@@ -9,11 +9,15 @@ export const getReserve = async () => {
         }
 
 export const deleteReserve = async (reserveId) => {
-  return await reserveSchema.deleteOne({_name: reserveId})
+  return await reserveSchema.deleteOne({_id: reserveId})
     };
 
 export const getReserveByID = async(reserveId) => {
-  return await reserveSchema.findOne({_name: reserveId})
+  return await reserveSchema.findOne({_id: reserveId})
+}
+
+export const putReserve = async(reserveId) => {
+  return await reserveSchema.find({_id: reserveId})
 }
 
 

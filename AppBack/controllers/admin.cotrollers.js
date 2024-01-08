@@ -33,10 +33,10 @@ export const login = async (request, response) => {
         let adminExist = await adminSchema.findOne({ email: body.email })
 
         if (!adminExist) {
-            return response.json({ error: "No existe un administrador con este Email" })
+            return response.json(0)
         }
 
-        const validationsPassword = bcrypt.compareSync(body.password, adminExist.password);
+        const validationsPassword = bcrypt.compare(body.password, adminExist.password);
 
         if (validationsPassword) {
             const payload = { _id: adminExist._id }
@@ -46,9 +46,10 @@ export const login = async (request, response) => {
                 token,
                 userExist
             }
+            console.log(adminData)
             return response.send(adminData)
         } else {
-            return response.send({ error: "Credenciales incorrectas" })
+            return response.send(0)
         }
 
     } catch (e) {
