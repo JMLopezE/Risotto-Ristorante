@@ -10,7 +10,7 @@ import { Token } from '../models/admin.models.js';
 })
 
 export class ReservesService {
-
+  
   constructor(private http: HttpClient) {}
 
   apiUrl = 'http://localhost:9000';
@@ -24,12 +24,17 @@ export class ReservesService {
     return this.http.post<Reserve>(this.apiUrl+"/reserve/create", reserve,{ headers: this.headers })
   }
 
+  edit(reserve:Reserve) {
+    return this.http.put(this.apiUrl + "/reserve/" + reserve.reserve_id, reserve)
+  }
+
   saveToken(token:Token){
     localStorage.setItem(this.tokenName, token.token)
   }
 
-  // deleteReserve(reserve:Reserve): Observable<Reserve> {
-  //   return this.http.delete<Reserve>(this.apiUrl+"/reserve/:reserveId", reserve,{ headers: this.headers })
+  // deleteReserve(reserveId:number): Observable<any> {
+    
+  //   return this.http.delete<any>(this.apiUrl+"/reserve/:deleteId"+reserveId, { headers: this.headers })
   // }
 
   getReserveList(): Observable<Reserve[]> {

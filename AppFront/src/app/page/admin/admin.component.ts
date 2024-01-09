@@ -33,11 +33,16 @@ export class AdminComponent {
         this.adminService.login(admin).subscribe({
             next:(token)=>{
                 console.log(token)
-                this.adminService.saveToken(token)
-                this.router.navigate(['/reserve-list'])
+                if (token == 0) {
+                    console.log("resvisa usuario y contraseña")
+                }else {
+                    this.adminService.saveToken(token)
+                    this.router.navigate(['/reserve-list'])                
+                }
+                // this.adminService.saveToken(token)
             },
             error:(error) =>{
-                console.log(error);
+                console.log("error front");
             }
         })
     }

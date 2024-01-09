@@ -19,8 +19,9 @@ export class AdminService {
     "Content-Type":"application/json"
   })
 
-  login(admin: Admin):Observable<Token>{
-    return this.http.post<Token>(this.apiUrl+"/admin/login", JSON.stringify(admin),{ headers: this.headers })
+  login(admin: Admin):Observable<any>{
+    
+    return this.http.post<any>("http://localhost:9000/admin/login",  admin)
   }
 
   register(admin: Admin): Observable<Admin> {

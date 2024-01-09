@@ -23,14 +23,12 @@ router.post("/login", async (req, res) => {
   //Comprobar existencia del email
   const admin = await adminSchema.findOne({ email: req.body.email });
   if (!admin) {
-    return res.json({ error: "Este usuario no existe" });
+    return res.json(0);
   }
 
   const validar = bcrypt.compareSync(req.body.password, admin.password);
   if (!validar) {
-    return res.json({
-      error: "Error, revisa tu nombre de usuario y contraseña",
-    });
+    return res.json(0);
   }
 
   res.json({ token: createToken(admin) });
@@ -40,7 +38,7 @@ router.post("/login", async (req, res) => {
 function createToken(admin) {
   const payload = {
     admin_id: admin._id,
-    admin_role: admin.role,
+    admin_password: admin.password,
   };
 
   return jwt.sign(payload, process.env.AUTH_KEY);
