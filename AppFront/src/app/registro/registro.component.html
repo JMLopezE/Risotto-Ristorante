@@ -93,13 +93,29 @@
         </div>
         <div class=" col-6">
           <label for="exampleFormControlInput1" class="form-label"
-            >Ocación</label>
+            >Elige tu ocasión</label>
+            <select class= "form-select" name="" id="">
+            <option value="1">Cumpleaños</option>
+            <option value="2">Cena romantica</option>
+            <option value="3">Despedida de soltero</option>
+            <option value="4">Despedida de soltera </option>
+            <option value="5">Amor y amistad</option>
+            <option value="6">Día de la madre</option>
+            <option value="7">Día del padre</option>
+            <option value="8">Grado</option>
+            <option value="9">Aniversario</option>
+            <option value="10">Almuerzo de negocios</option>
+            <option value="11">Cena de negocios</option>
+            <option value="12">Propuesta de matrimonio</option>
+            <option value="13">Ocasional</option>
+            <option value="14">Otro</option>
           <input
             type="special_occasions"
             class="form-control"
             formControlName="special_occasions"
             id="exampleFormControlInput1"
           />
+        </select>
           <div class="alert-danger" *ngIf="special_occasions.invalid && (special_occasions.dirty || special_occasions.touched)">
             <div class="container-error-message">
               Elige una ocacion
