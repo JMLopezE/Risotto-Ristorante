@@ -6,8 +6,8 @@
     padding: 100px 0px;
     align-items: center;
     justify-content: center;
-    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299); 
-    background: linear-gradient(to right, #B0DAB9, #DAD299); 
+    background: -webkit-linear-gradient(to right, #030303, #012709); 
+    background-image: url(https://e1.pxfuel.com/desktop-wallpaper/937/465/desktop-wallpaper-italian-flag-italy-flag.jpg);
 }
 
 .text{
