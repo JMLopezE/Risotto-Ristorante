@@ -14,21 +14,21 @@ reserveRouter.post("/create", async(req, res) => {
 })
 
 reserveRouter.delete("/:deleteId", async(req, res) =>{
-        const { reserveId } = req.params;
+        const { deleteId } = req.params;
 
-        res.json(await deleteReserve(reserveId))
+        res.json(await deleteReserve(deleteId))
 })
 
 reserveRouter.get("/:getId", async(req, res) =>{
-        const { reserveId } = req.params;
+        const { getId } = req.params;
 
-        res.json(await getReserveByID(reserveId))
+        res.json(await getReserveByID(getId))
 })
 
 reserveRouter.put("/:editId", async(req, res) =>{
-        const { reserveId } = req.params;
+        const { editId } = req.params;
 
-        res.json(await putReserve(reserveId))
+        res.json(await putReserve(editId))
 })
 
 export default reserveRouter;

@@ -14,7 +14,7 @@ export const routes: Routes = [
         { path: "", component: HomeComponent },
         { path: "modal", component: AdminModalComponent },
         { path: "reserva", component: RegistroComponent },
-        { path: "reserve/:id", component: ReserveListComponent},
+        { path: "reserve-list/:id", component: ReserveListComponent},
         { path: "reserve-list", component: ReserveListComponent,
         canActivate: [loginGuard]}
 

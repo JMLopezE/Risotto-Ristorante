@@ -1,4 +1,6 @@
 export interface Reserve {
+Reserve: any;
+        reserve_id: string;
         
         name: string;
         last_name: string;

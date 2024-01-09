@@ -27,8 +27,8 @@
           <th>Operaciones <i class="bi bi-chevron-expand"></i></th>
           </tr>
         </thead>
-        <tbody *ngFor="let Reserve of reservas">
-          <tr>
+        <tbody >
+          <tr *ngFor="let Reserve of reservas">
             <th scope="row"></th>
             <td>{{ Reserve.name }}</td>
             <td>{{ Reserve.last_name }}</td>
@@ -38,10 +38,9 @@
             <td>{{ Reserve.special_occasions }}</td>
             <td>{{ Reserve.date_reserve }}</td>
             <td>{{ Reserve.hour_reserve }}</td>
-            <td>
-              <a routerLink="/reserve-list/{{reserve}}"> <button><i class="bi bi-pencil-square" id="icons"></i></button> </a>
+            <!-- <td><a routerLink="/reserva/{{reserve.reserve._id}}"> <button><i class="bi bi-pencil-square" id="icons"></i></button> </a>
               <a href="" onclick="delete(reserve._id)"> <button><i  class="bi bi-trash" id="icons"></i></button>  </a>
-            </td>
+            </td> -->
           </tr>
         </tbody>
       </table>

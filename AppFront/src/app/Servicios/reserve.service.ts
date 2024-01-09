@@ -24,9 +24,9 @@ export class ReservesService {
     return this.http.post<Reserve>(this.apiUrl+"/reserve/create", reserve,{ headers: this.headers })
   }
 
-  // edit(reserve:any): Observable<any>{
-  //   return this.http.put(this.apiUrl + "/reserve/:edit" + reserve._id, reserve, { headers: this.headers })
-  // }
+  edit(reserve:Reserve) {
+    return this.http.put(this.apiUrl + "/reserve/" + reserve.reserve_id, reserve)
+  }
 
   saveToken(token:Token){
     localStorage.setItem(this.tokenName, token.token)
