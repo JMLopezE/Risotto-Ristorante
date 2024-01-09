@@ -12,8 +12,8 @@ body {
     background-image: 100%;
     /* height: 150vh; */
     background-image: url(https://static.vecteezy.com/system/resources/previews/005/441/414/non_2x/abstract-white-and-gray-gradient-background-with-geometric-shape-illustration-vector.jpg);
-    /* background-size:100%; */
-    background-repeat: no-repeat;
+    background-size:100%; */
+    background-repeat:no-repeat;
 }
 
 .imagenMenu p{
